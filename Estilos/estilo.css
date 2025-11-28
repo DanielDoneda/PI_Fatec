@@ -1,0 +1,213 @@
+/* ============================================
+   PALETA DE CORES - SUA PALETA
+   ============================================ */
+   :root {
+    --cor1: #2D3E40;   /* Primária escura */
+    --cor2: #387373;   /* Secundária */
+    --cor3: #93BFB7;   /* Suave */
+    --cor4: #97A6A0;   /* Neutra */
+    --cor5: #E4F2E7;   /* Fundo claro */
+    --white: #ffffff;
+}
+
+/* ============================================
+   GERAL
+   ============================================ */
+body {
+    background-color: var(--cor5);
+    color: var(--cor1);
+    font-family: "Segoe UI", sans-serif;
+    padding-top: 70px;
+}
+
+.section {
+    padding: 5rem 0;
+}
+
+.section-title {
+    font-weight: 800;
+    font-size: 2.4rem;
+    color: var(--cor1);
+}
+
+/* ============================================
+   NAVBAR
+   ============================================ */
+.bg-primary-custom {
+    background-color: var(--cor1) !important;
+}
+
+.navbar-brand .logo-img {
+    width: 40px;
+    height: auto;
+}
+
+.nav-link {
+    color: var(--cor3) !important;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    color: var(--white) !important;
+}
+
+.btn-cta {
+    background-color: var(--cor2);
+    color: var(--white);
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.btn-cta:hover {
+    background-color: var(--cor1);
+    color: var(--white);
+}
+
+/* ============================================
+   HERO
+   ============================================ */
+.hero {
+    background: linear-gradient(135deg, var(--cor2), var(--cor1));
+    padding: 8rem 0 6rem;
+    color: var(--white);
+}
+
+.hero .highlight {
+    color: var(--cor3);
+}
+
+.hero .btn-outline-light {
+    border: 2px solid var(--white);
+}
+
+.hero .btn-outline-light:hover {
+    background-color: var(--white);
+    color: var(--cor1);
+}
+
+/* ============================================
+   SOCIAL PROOF
+   ============================================ */
+.trust {
+    background-color: var(--white);
+    border-bottom: 1px solid var(--cor4);
+}
+
+/* ============================================
+   BENEFÍCIOS
+   ============================================ */
+.benefit-card {
+    border-radius: 12px;
+    background-color: var(--white);
+    border: 1px solid var(--cor4);
+    transition: 0.3s;
+}
+
+.benefit-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--cor2);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.icon-benefit {
+    font-size: 2.6rem;
+    color: var(--cor2);
+}
+
+/* ============================================
+   FEATURES
+   ============================================ */
+.features {
+    background-color: var(--cor1);
+}
+
+.feature-item {
+    background-color: rgba(255,255,255,0.12);
+    padding: 1rem;
+    border-radius: 8px;
+    font-weight: 500;
+    color: var(--white);
+    border-left: 4px solid var(--cor2);
+    transition: 0.3s;
+}
+
+.feature-item:hover {
+    background-color: rgba(255,255,255,0.18);
+    transform: translateX(6px);
+}
+
+/* ============================================
+   PRICING
+   ============================================ */
+.pricing-card {
+    padding: 2rem;
+    border-radius: 14px;
+    background-color: var(--white);
+    border: 1px solid var(--cor4);
+    transition: 0.3s;
+}
+
+.pricing-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.pricing-card.featured {
+    background-color: var(--cor2);
+    color: var(--white);
+    border: 2px solid var(--cor1);
+    transform: scale(1.05);
+}
+
+.pricing-card .price {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 1rem 0;
+    color: var(--cor2);
+}
+
+.pricing-card.featured .price {
+    color: var(--white);
+}
+
+.pricing-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 1rem 0;
+}
+
+.pricing-list li {
+    padding: 0.5rem 0;
+    color: var(--cor1);
+}
+
+.pricing-card.featured li {
+    color: var(--white);
+}
+
+/* ============================================
+   CTA FINAL
+   ============================================ */
+.final-cta {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, var(--cor1), var(--cor2));
+    color: var(--white);
+}
+
+.final-cta .btn-cta {
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+footer {
+    background-color: var(--cor1);
+    padding: 2rem;
+}
+
+footer p {
+    color: var(--cor3);
+}
