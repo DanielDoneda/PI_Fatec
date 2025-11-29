@@ -169,3 +169,51 @@ body {
 .metric-card:hover .icon-metric {
     opacity: 0.35;
 }
+
+/* 🌙 MODO ESCURO -------------------------------------- */
+
+body.dark {
+    background: #1E1E1E !important;
+    color: #E4F2E7 !important;
+}
+
+body.dark .main-content {
+    background: #1E1E1E !important;
+}
+
+body.dark .card {
+    background: #2A2A2A !important;
+    border-color: #387373 !important;
+    color: #E4F2E7 !important;
+}
+
+body.dark .sidebar {
+    background: #2D3E40 !important;
+    border-right: 2px solid #387373;
+}
+
+body.dark .sidebar-menu a {
+    color: #E4F2E7 !important;
+}
+
+body.dark .sidebar-menu a.active {
+    background: #387373 !important;
+}
+
+body.dark .topbar {
+    background: #2D3E40 !important;
+    border-bottom: 2px solid #387373;
+    color: #E4F2E7;
+}
+
+body.dark input,
+body.dark select,
+body.dark textarea {
+    background: #333;
+    color: #E4F2E7;
+    border-color: #387373;
+}
+
+body.dark .form-check-label {
+    color: #E4F2E7 !important;
+}

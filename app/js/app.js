@@ -567,3 +567,26 @@ document.addEventListener("DOMContentLoaded", () => {
   renderDocumentos();
   renderVeiculos();
 });
+
+// 🌙 MODO ESCURO -------------------------------------
+
+const toggleDark = document.getElementById("toggleDarkMode");
+
+// aplica o tema salvo antes de carregar
+if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark");
+    if (toggleDark) toggleDark.checked = true;
+}
+
+// alternar tema ao clicar
+if (toggleDark) {
+    toggleDark.addEventListener("change", function () {
+        if (this.checked) {
+            document.body.classList.add("dark");
+            localStorage.setItem("theme", "dark");
+        } else {
+            document.body.classList.remove("dark");
+            localStorage.setItem("theme", "light");
+        }
+    });
+}
