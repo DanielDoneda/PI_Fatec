@@ -1,0 +1,42 @@
+
+        :root {
+            --cor1: #2D3E40;
+            --cor2: #387373;
+            --cor3: #93BFB7;
+            --cor4: #97A6A0;
+            --cor5: #E4F2E7;
+        }
+
+        body {
+            background: var(--cor5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-box {
+            width: 100%;
+            max-width: 400px;
+            background: var(--cor1);
+            padding: 2rem;
+            border-radius: 12px;
+            color: #fff;
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+        }
+
+        .login-box h2 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: var(--cor3);
+        }
+
+        .btn-login {
+            background: var(--cor2);
+            color: #fff;
+        }
+
+        .btn-login:hover {
+            background: #2d5858;
+        }
+    

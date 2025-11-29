@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard • Link Fiscal</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- CSS interno -->
+    <link rel="stylesheet" href="css/app.css">
+
+
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <aside id="sidebar" class="sidebar">
+        <div class="sidebar-header">
+            <img src="../Imagens/logo 2.png" class="sidebar-logo">
+            <h5 class="mt-2">Link Fiscal</h5>
+        </div>
+
+        <ul class="sidebar-menu">
+
+            <!-- DASHBOARD -->
+            <li>
+                <a href="dashboard.html"><i class="bi bi-speedometer2"></i> Dashboard</a>
+            </li>
+
+            <!-- EMISSÃO (colapsável) -->
+            <li class="menu-title" data-bs-toggle="collapse" data-bs-target="#menuEmissao">
+                Emissão <i class="bi bi-chevron-down float-end"></i>
+            </li>
+            <ul id="menuEmissao" class="collapse sidebar-submenu">
+                <li><a href="nfe.html"><i class="bi bi-file-earmark-text"></i> NF-e</a></li>                
+                <li><a href="nfce.html"><i class="bi bi-receipt"></i> NFC-e</a></li>
+                <li><a href="nfse.html"><i class="bi bi-receipt"></i> NFS-e</a></li>              
+                <li><a href="cte.html"><i class="bi bi-receipt"></i> CT-e</a></li>
+                <li><a href="mdfe.html"><i class="bi bi-receipt"></i> MDF-e</a></li>
+            </ul>
+
+            <!-- CADASTROS (colapsável) -->
+            <li class="menu-title" data-bs-toggle="collapse" data-bs-target="#menuCadastros">
+                Cadastros <i class="bi bi-chevron-down float-end"></i>
+            </li>
+            <ul id="menuCadastros" class="collapse sidebar-submenu">
+                <li><a href="clientes.html"><i class="bi bi-people"></i> Clientes</a></li>
+                <li><a href="usuarios.html"><i class="bi bi-person-lines-fill"></i> Usuários</a></li>
+            </ul>
+
+            <!-- SISTEMA (colapsável) -->
+            <li class="menu-title" data-bs-toggle="collapse" data-bs-target="#menuSistema">
+                Sistema <i class="bi bi-chevron-down float-end"></i>
+            </li>
+            <ul id="menuSistema" class="collapse sidebar-submenu">
+                <li><a href="#"><i class="bi bi-gear"></i> Configurações</a></li>
+                <li><a href="../index.html" class="text-danger"><i class="bi bi-box-arrow-right"></i> Sair</a></li>
+            </ul>
+
+        </ul>
+    </aside>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <div class="main-content">
+
+        <!-- TOPO -->
+        <header class="topbar">
+            <button id="toggleMenu" class="btn btn-sm btn-outline-secondary">
+                <i class="bi bi-list"></i>
+            </button>
+
+            <div class="user-info">
+                <span id="nomeUsuarioTop" class="me-2"></span>
+                <i class="bi bi-person-circle fs-4"></i>
+            </div>
+        </header>
+
+        <!-- ÁREA DO CONTEÚDO -->
+        <main class="p-4">            
+                <h2 class="mb-4">
+                        <i class="bi bi-file-earmark-text me-2"></i> Emissão de NFS-e
+                    </h2>
+
+                    <!-- Dados do Prestador -->
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title mb-3">Dados do Prestador</h5>
+
+                            <div class="row g-3">
+                                <div class="col-md-4">
+                                    <label class="form-label">CNPJ</label>
+                                    <input type="text" id="nfs_prestador_cnpj" class="form-control">
+                                </div>
+
+                                <div class="col-md-8">
+                                    <label class="form-label">Razão Social</label>
+                                    <input type="text" id="nfs_prestador_razao" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dados do Tomador -->
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title mb-3">Dados do Tomador</h5>
+
+                            <div class="row g-3">
+
+                                <div class="col-md-4">
+                                    <label class="form-label">CNPJ/CPF</label>
+                                    <input type="text" id="nfs_tomador_doc" class="form-control">
+                                </div>
+
+                                <div class="col-md-8">
+                                    <label class="form-label">Nome ou Razão Social</label>
+                                    <input type="text" id="nfs_tomador_nome" class="form-control">
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label class="form-label">Email</label>
+                                    <input type="email" id="nfs_tomador_email" class="form-control">
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label class="form-label">Telefone</label>
+                                    <input type="text" id="nfs_tomador_tel" class="form-control">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Serviço Prestado -->
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title mb-3">Serviço Prestado</h5>
+
+                            <div class="row g-3">
+
+                                <div class="col-md-8">
+                                    <label class="form-label">Descrição do Serviço</label>
+                                    <textarea id="nfs_servico_desc" class="form-control" rows="3"></textarea>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label class="form-label">Código do Serviço (LC 116)</label>
+                                    <input type="text" id="nfs_servico_codigo" class="form-control">
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label class="form-label">Valor do Serviço (R$)</label>
+                                    <input type="number" id="nfs_servico_valor" class="form-control">
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label class="form-label">Alíquota (%)</label>
+                                    <input type="number" id="nfs_servico_aliquota" class="form-control">
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label class="form-label">ISS Retido?</label>
+                                    <select id="nfs_iss_retido" class="form-select">
+                                        <option value="não">Não</option>
+                                        <option value="sim">Sim</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Totais e Emissão -->
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title mb-3">Totais</h5>
+
+                            <div class="row g-3">
+                                <div class="col-md-4">
+                                    <label class="form-label">Base de Cálculo</label>
+                                    <input type="text" id="nfs_base" class="form-control" readonly>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label class="form-label">Valor ISS</label>
+                                    <input type="text" id="nfs_valor_iss" class="form-control" readonly>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label class="form-label">Valor Total da Nota</label>
+                                    <input type="text" id="nfs_total" class="form-control" readonly>
+                                </div>
+                            </div>
+
+                            <div class="text-end mt-4">
+                                <button class="btn btn-success px-4" onclick="emitirNFS()">
+                                    <i class="bi bi-check-circle me-1"></i> Emitir NFS-e
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+        </main>
+
+    </div>
+
+    <!-- Bootstrap + JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS interno -->
+    <script src="js/app.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+   
+    
+
+</body>
+</html>

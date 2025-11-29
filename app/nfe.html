@@ -83,6 +83,108 @@
 
         <!-- ÁREA DO CONTEÚDO -->
         <main class="p-4">            
+            <h2 class="mb-4"><i class="bi bi-file-earmark-text me-2"></i>Emissão de NF-e</h2>
+
+<!-- DADOS DO EMITENTE / DESTINATÁRIO -->
+<div class="card shadow-sm mb-4">
+    <div class="card-body">
+        <h5 class="mb-3">Dados da Nota</h5>
+
+        <div class="row g-3">
+            <div class="col-md-4">
+                <label class="form-label">Número da Nota</label>
+                <input type="text" id="nfeNumero" class="form-control" placeholder="Ex: 1029">
+            </div>
+
+            <div class="col-md-4">
+                <label class="form-label">Série</label>
+                <input type="text" id="nfeSerie" class="form-control" placeholder="1">
+            </div>
+
+            <div class="col-md-4">
+                <label class="form-label">Data de Emissão</label>
+                <input type="date" id="nfeData" class="form-control">
+            </div>
+
+            <div class="col-md-6">
+                <label class="form-label">Destinatário</label>
+                <select id="nfeDestinatario" class="form-select">
+                    <option value="">Selecione...</option>
+                    <option>Empresa XPTO</option>
+                    <option>Consumidor Final</option>
+                    <option>Studio Alfa</option>
+                </select>
+            </div>
+
+            <div class="col-md-6">
+                <label class="form-label">Tipo de Operação</label>
+                <select id="nfeOperacao" class="form-select">
+                    <option>1 - Saída</option>
+                    <option>0 - Entrada</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ITENS DA NOTA -->
+<div class="card shadow-sm mb-4">
+    <div class="card-body">
+        <h5 class="mb-3">Itens da Nota</h5>
+
+        <div class="row g-3 mb-3">
+            <div class="col-md-5">
+                <label class="form-label">Produto</label>
+                <input id="itemNome" type="text" class="form-control" placeholder="Ex: Teclado Mecânico">
+            </div>
+
+            <div class="col-md-2">
+                <label class="form-label">Qtd</label>
+                <input id="itemQtd" type="number" class="form-control" value="1" min="1">
+            </div>
+
+            <div class="col-md-2">
+                <label class="form-label">Valor Unitário</label>
+                <input id="itemValor" type="number" class="form-control" value="0">
+            </div>
+
+            <div class="col-md-3 d-flex align-items-end">
+                <button class="btn btn-primary w-100" onclick="adicionarItemNFe()">
+                    <i class="bi bi-plus-lg"></i> Adicionar Item
+                </button>
+            </div>
+        </div>
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Produto</th>
+                    <th>Qtd</th>
+                    <th>Valor Unit.</th>
+                    <th>Total</th>
+                    <th class="text-end">Ações</th>
+                </tr>
+            </thead>
+            <tbody id="tabelaItensNFe"></tbody>
+        </table>
+
+        <div class="text-end mt-3">
+            <h5>Total da Nota: <span id="nfeTotal" class="text-success">R$ 0,00</span></h5>
+        </div>
+    </div>
+</div>
+
+<!-- AÇÕES DA NOTA -->
+<div class="card shadow-sm">
+    <div class="card-body text-end">
+        <button class="btn btn-secondary me-2"><i class="bi bi-file-earmark-arrow-down"></i> Salvar Rascunho</button>
+        <button class="btn btn-success" onclick="emitirNFe()">
+            <i class="bi bi-check-circle"></i> Emitir Nota
+        </button>
+    </div>
+</div>
+
+
 
         </main>
 

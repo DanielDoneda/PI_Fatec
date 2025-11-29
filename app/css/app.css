@@ -46,6 +46,7 @@ body {
 .sidebar-menu {
     list-style: none;
     padding: 0;
+    padding-left: 10px;
     margin-top: 1rem;
 }
 
@@ -65,6 +66,37 @@ body {
 .sidebar-menu a:hover {
     background: var(--cor2);
     color: var(--white);
+}
+
+.sidebar-menu a.active {
+    background: #387373;
+    color: #fff !important;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.sidebar-submenu {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.sidebar-submenu a {
+    font-size: 0.95rem;
+    opacity: 0.8;
+}
+
+.sidebar-submenu a:hover {
+    opacity: 1;
+}
+
+.menu-title {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #93BFB7;
+    margin-top: 15px;
+    cursor: pointer;
+    padding: 5px 0;
 }
 
 .sidebar-menu .bi {

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login • LinkFiscal</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="Estilos/estiloLogin.css">
+</head>
+
+<body>
+
+    <div class="login-box">
+        <h2><i class="bi bi-person-circle"></i> Entrar</h2>
+
+        <div class="mb-3">
+            <label class="form-label">Usuário</label>
+            <input id="userName" type="text" class="form-control" placeholder="Digite seu nome">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">E-mail</label>
+            <input id="userEmail" type="email" class="form-control" placeholder="email@exemplo.com">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Senha</label>
+            <input id="userPass" type="password" class="form-control" placeholder="********">
+        </div>
+
+        <button class="btn btn-login w-100 mt-3" onclick="doLogin()">Entrar</button>
+    </div>
+
+
+    <script>
+    function doLogin() {
+        const name = document.getElementById("userName").value.trim();
+
+        if (name === "") {
+            alert("Digite o nome do usuário");
+            return;
+        }
+
+        // Salvar no navegador
+        localStorage.setItem("usuario", name);
+
+        // Redirecionar
+        window.location.href = "app/dashboard.html";
+    }
+</script>
+
+
+</body>
+</html>
